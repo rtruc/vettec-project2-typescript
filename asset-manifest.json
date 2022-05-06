@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/vettec-project2-typescript/static/css/main.1f030e49.css",
-    "main.js": "/vettec-project2-typescript/static/js/main.a670bdc9.js",
+    "main.js": "/vettec-project2-typescript/static/js/main.483f9710.js",
     "static/media/githubIcon.png": "/vettec-project2-typescript/static/media/githubIcon.7955cd3501f7e0e106db.png",
     "index.html": "/vettec-project2-typescript/index.html",
     "main.1f030e49.css.map": "/vettec-project2-typescript/static/css/main.1f030e49.css.map",
-    "main.a670bdc9.js.map": "/vettec-project2-typescript/static/js/main.a670bdc9.js.map"
+    "main.483f9710.js.map": "/vettec-project2-typescript/static/js/main.483f9710.js.map"
   },
   "entrypoints": [
     "static/css/main.1f030e49.css",
-    "static/js/main.a670bdc9.js"
+    "static/js/main.483f9710.js"
   ]
 }
