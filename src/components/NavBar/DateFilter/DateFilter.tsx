@@ -10,8 +10,6 @@ const DateFilterDiv = styled.form`
         display: flex;
         align-items: center;
 
-        /* margin: 0px 0px; */
-
         position: absolute;
         left: 10px;
         top: 2px;

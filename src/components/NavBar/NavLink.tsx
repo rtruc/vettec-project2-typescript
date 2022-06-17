@@ -18,6 +18,6 @@ export const ActiveNavLink = styled(NavLink)`
     background-color: ${theme.active_Color};
 
     &:hover {
-        background-color: ${theme.hover_Color_Alt};
+        background-color: ${theme.hover_Color};
     } 
 `;

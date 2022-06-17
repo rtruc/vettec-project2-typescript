@@ -32,15 +32,9 @@ const SearchField = styled.input`
         background-color 0.3s ease-in-out,
         color 0.3s ease-in-out;
 
-    /* &:hover {
-        background-color: ${theme.searchBox_BackgroundColor_Hover};
-        outline: none;
-    } */
 
     &:focus {
         background-image: none;
-        color: ${theme.navbar_Text};
-        background-color: ${theme.hover_Color_Alt};
         outline: none;
     }
 

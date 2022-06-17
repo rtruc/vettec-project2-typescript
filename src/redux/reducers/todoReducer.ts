@@ -9,22 +9,22 @@ export const todoReducer = (state = initialState, action: AnyAction) => {
     
     switch(action.type) {
         case 'SORT_ALPHA_UP': {
-            state.tasks.sort((t1, t2) => sortByTitle(t1, t2));            
+            state.tasks.sort((t1, t2) => sortByProperty(t1, t2, "title"));            
             return {...state};
         }
-
+        
         case 'SORT_ALPHA_DOWN': {
-            state.tasks.sort((t1, t2) => sortByTitle(t2, t1));            
+            state.tasks.sort((t1, t2) => sortByProperty(t2, t1, "title"));            
             return {...state};
         }
-
+        
         case 'SORT_DATE_UP': {
-            state.tasks.sort((t1, t2) => sortByDate(t1, t2));            
+            state.tasks.sort((t1, t2) => sortByProperty(t1, t2, "date"));            
             return {...state};
         }
-
+        
         case 'SORT_DATE_DOWN': {
-            state.tasks.sort((t1, t2) => sortByDate(t2, t1));            
+            state.tasks.sort((t1, t2) => sortByProperty(t2, t1, "date"));            
             return {...state};
         }
 
@@ -33,10 +33,6 @@ export const todoReducer = (state = initialState, action: AnyAction) => {
             const isComplete = action.pathName === "/completed" ? true : false;
             
             const newTask = new Task("New Task", date, isComplete, generateID());
-            // const newTask = {title     : "New Task", 
-            //                  date      : date,
-            //                  isComplete: isComplete,
-            //                  _id        : generateID()};
 
             // FRONT OR BACK FOR NEW TASKS?
             state.tasks.push(newTask);
@@ -80,23 +76,19 @@ export const todoReducer = (state = initialState, action: AnyAction) => {
 
         case 'SEARCH_TITLES': {
             if(action.searchText.length > 0) {
-                // state.filters.searchFilter = textFilter(action.searchText);
                 state.filters.set("textFilter", textFilter(action.searchText));
                 return {...state};
             } else {
-                // delete state.filters.searchFilter;    
                 state.filters.delete("textFilter");    
                 return {...state};
             }
         }
 
         case 'UPDATE_DATE_FILTER': {
-            // state.dateRange[action.dateType] = action.newDate;
             action.dateType === 'earlier' ? state.dateRange.earlier = action.newDate :
                                             state.dateRange.later   = action.newDate;
 
             // FORCE STATE UPDATE IF DATE FILTER IS IN USE
-            // if(state.filters.dateFilter) {
             if(state.filters.has("dateFilter")) {
                 const earlier = state.dateRange.earlier;
                 const later   = state.dateRange.later;
@@ -125,30 +117,11 @@ export const todoReducer = (state = initialState, action: AnyAction) => {
     }
 }
 
-// TODO: OBJECT INDEX BY STRING VAR IN TYPESCRIPT?
-// function sortByProperty(t1: Task, t2: Task, property: string) {
-//     if (t1[property] < t2.title) {
-//         return -1;
-//     }
-//     if (t1.title > t2.title) {
-//         return 1;
-//     }
-//     return 0;
-// }
-function sortByTitle(t1: Task, t2: Task) {
-    if (t1.title < t2.title) {
+function sortByProperty(t1: Task, t2: Task, property: string) {
+    if (t1[property] < t2[property]) {
         return -1;
     }
-    if (t1.title > t2.title) {
-        return 1;
-    }
-    return 0;
-}
-function sortByDate(t1: Task, t2: Task) {
-    if (t1.date < t2.date) {
-        return -1;
-    }
-    if (t1.date > t2.date) {
+    if (t1[property] > t2[property]) {
         return 1;
     }
     return 0;

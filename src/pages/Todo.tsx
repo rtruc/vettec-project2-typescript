@@ -9,8 +9,6 @@ export const Todo = () => {
     const filters = useSelector((state: State) => state.filters);    
     filters.set("pageFilter", todoFilter);
     
-    console.log("Todo: ", filters);
-
     return (
             <List />
     );

@@ -6,8 +6,6 @@ import {completedFilter} from "../util/filters"
 
 export const Completed = () => {
     
-    // const filters= useSelector(state => state.filters);    
-    // filters.pageFilter = completedFilter;
     const filters = useSelector((state: State) => state.filters);    
     filters.set("pageFilter", completedFilter);
 

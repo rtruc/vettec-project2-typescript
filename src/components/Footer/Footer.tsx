@@ -5,9 +5,6 @@ import { IconBundle } from "./IconBundle";
 import { ListControls } from "./ListControls";
 import { SocialMediaIcon } from "./SocialMediaIcon";
 
-// TODO: THEME
-// const navBar_BackgroundColor = 'rgba(233, 16, 246, 0.5)';
-
 
 const FooterDiv = styled.div`
     display: flex;

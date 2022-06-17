@@ -4,6 +4,8 @@ export class Task {
     isComplete: boolean;
     _id: string;
 
+    [propName: string]: string | boolean;
+
     constructor(title: string, date: string, isComplete: boolean, _id: string) {
         this.title = title;
         this.date = date;

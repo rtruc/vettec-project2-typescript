@@ -1,8 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { addTask, sortTitlesAscending, sortTitlesDescending, sortDatesAscending, sortDatesDescending } from "../../redux/actions/actions";
-import { NavItem } from "../NavBar/NavItem"
+import { sortTitlesAscending, sortTitlesDescending, sortDatesAscending, sortDatesDescending } from "../../redux/actions/actions";
 import { FooterButton } from "./FooterButton"
 import { Icon } from "./Icon";
 import { alphaDown, alphaUp, timeDown, timeUp } from "../../img/icons";

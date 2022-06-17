@@ -3,8 +3,6 @@ import { theme } from "../../css/theme";
 import { Icon } from "./Icon"
 
 
-const hover_Color = 'rgb(235, 16, 246)';
-
 const SocialMediaIconDiv = styled.a`
     display: flex;
     align-items: center;
@@ -27,7 +25,6 @@ interface SocialMediaIconProps {
     };
 }
 
-// export const SocialMediaIcon = ({ iconInfo }) => {
 export const SocialMediaIcon: React.FC<SocialMediaIconProps> = ({ iconInfo }) => {
 
     return (

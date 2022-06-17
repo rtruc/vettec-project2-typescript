@@ -1,7 +1,5 @@
-import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { editDate } from "../../redux/actions/actions";
-import { convertDateToHTMLCompliantString, convertDateToJSONCompliantString, discardTime } from "../../util/data";
+import { convertDateToHTMLCompliantString, discardTime } from "../../util/data";
 import { Task } from "../../model/task";
 import { theme } from "../../css/theme";
 

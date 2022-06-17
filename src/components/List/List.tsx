@@ -7,12 +7,20 @@ import { TaskBox } from "../TaskBox/TaskBox";
 
 const ListDiv = styled.div`
     display: flex;
+
+    /* Single file or multiple tasks per line? */
     flex-direction: column;
+    /* flex-flow: row wrap; */
+
     align-items: center;
     gap: 10px;
+
+    margin: 0 auto;
     
     padding-top: 50px;
     padding-bottom: 60px;
+
+    max-width: 700px;
 `
 
 export const List: React.FC = () => {

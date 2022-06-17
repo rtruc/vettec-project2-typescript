@@ -7,7 +7,4 @@ export const IconBundle = styled.div`
     align-items: center;
 
     height: 100%;
-
-
-    /* flex-direction: column; */
 `

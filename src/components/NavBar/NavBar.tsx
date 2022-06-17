@@ -52,7 +52,6 @@ export const NavBar = () => {
                             </NavItem> 
                     );
                 })}
-                {/* <NavItem onClick={() => dispatch(addTask(pathname))}>+</NavItem> */}
                 <NavBarButton onClick={() => dispatch(addTask(pathname))}>+</NavBarButton>
 
                 <SearchForm />

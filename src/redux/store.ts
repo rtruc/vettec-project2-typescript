@@ -14,6 +14,4 @@ initState.tasks             = getTasks();
 initState.dateRange.earlier = weekAgoString;
 initState.dateRange.later   = todayString;
 
-
 export const store = createStore(todoReducer, initState);
-// export const store = createStore(todoReducer);

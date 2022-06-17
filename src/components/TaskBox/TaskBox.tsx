@@ -1,4 +1,3 @@
-import { click } from "@testing-library/user-event/dist/click";
 import { useDispatch } from "react-redux";
 import styled, { StyledComponent } from "styled-components";
 import { deleteTask, editDate, toggleCompletionStatus } from "../../redux/actions/actions";
@@ -6,7 +5,6 @@ import { convertDateToJSONCompliantString, discardTime } from "../../util/data";
 import { Task } from "../../model/task";
 import { theme } from "../../css/theme";
 import { CheckBox } from "../Common/CheckBox";
-// import { CheckBox } from "../Common/CheckBox";
 import { DueDate } from "./Date";
 import { DeleteButton } from "./DeleteButton";
 import { Title } from "./Title";
@@ -36,18 +34,14 @@ const NormalTask = styled.div`
     // WEBKIT DOESN'T APPLY BORDER-RADIUS TO OUTLINES...
     // USING HARD DROP SHADOW INSTEAD
     border-radius:5px;
-    box-shadow: 0 0 0 .75pt ${theme.task_BorderShadowColor};
+    box-shadow: 0 0 0 1.00pt ${theme.task_BorderShadowColor};
 
     &:hover, &:focus{
-        /* filter: saturate(1.95); */
         box-shadow: 0 0 0 1.75pt ${theme.task_BorderShadowColor_HoverFocus};
-        /* transform: scale(1.025); */
     }
 `
 
-const OverdueTask = styled(NormalTask)`
-        /* background-color: ${theme.task_Overdue_BackgroundColor}; */
-        
+const OverdueTask = styled(NormalTask)`        
         box-shadow: 0 0 0 .75pt ${theme.task_Overdue_BorderShadowColor};
         &:hover{
             box-shadow: 0 0 0 2.00pt ${theme.task_Overdue_BorderShadowColor_HoverFocus};
