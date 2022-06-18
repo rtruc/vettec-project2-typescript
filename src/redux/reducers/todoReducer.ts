@@ -76,7 +76,7 @@ export const todoReducer = (state = initialState, action: AnyAction) => {
 
         case 'SEARCH_TITLES': {
             if(action.searchText.length > 0) {
-                state.filters.set("textFilter", textFilter(action.searchText));
+                state.filters.set("textFilter", textFilter(action.searchText.toLowerCase()));
                 return {...state};
             } else {
                 state.filters.delete("textFilter");    
