@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { sortTitlesAscending, sortTitlesDescending, sortDatesAscending, sortDatesDescending } from "../../redux/actions/actions";
 import { FooterButton } from "./FooterButton"
@@ -18,7 +17,6 @@ const ControlsDiv = styled.div`
 export const ListControls = () => {
 
     const dispatch = useDispatch();
-    let   pathname = useLocation().pathname;
 
     return (
         <ControlsDiv>

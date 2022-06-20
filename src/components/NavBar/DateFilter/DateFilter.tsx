@@ -28,10 +28,10 @@ export const DateFilter = () => {
     return (
         <DateFilterDiv >
             <DateFilterPickerColumn>
-                <DateFilterPicker required defaultValue={later}
-                    onChange={(e) => dispatch(updateDateFilter(e.target.value, 'later'))} />
                 <DateFilterPicker required defaultValue={earlier}
                     onChange={(e) => dispatch(updateDateFilter(e.target.value, 'earlier'))} />
+                <DateFilterPicker required defaultValue={later}
+                    onChange={(e) => dispatch(updateDateFilter(e.target.value, 'later'))} />
             </DateFilterPickerColumn>
             <CheckBox clickEvent={() => dispatch(toggleDateFilter())} />
         </DateFilterDiv>
